@@ -1,5 +1,5 @@
 import Container from "../container";
-
+import Logo from "./Logo";
 const Navbar = () => {
     return (
     <div className="fixed w-full bg-white z-10 shadow-sm">
@@ -15,6 +15,7 @@ const Navbar = () => {
                 "
                 >
                     <Logo />
+                    {/* <Search /> */}
                 </div>
             </Container>
         </div>
