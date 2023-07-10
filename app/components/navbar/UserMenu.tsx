@@ -1,6 +1,7 @@
 'use client';
 
 import { AiOutlineMenu } from 'react-icons/ai';
+import Avatar from '../Avatar';
 
 const UserMenu = () => {
     return (
