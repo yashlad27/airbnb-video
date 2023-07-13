@@ -7,6 +7,8 @@ import { useCallback, useState } from 'react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 import useRegisterModal from '@/app/hooks/useRegisterModal';
 import Modal from '@/app/components/modals/Modal';
+import Heading from '@/app/components/Heading';
+import Input from '@/app/components/inputs/Input';
 
 const RegisterModal = () => {
 
@@ -43,7 +45,14 @@ const RegisterModal = () => {
     }
 
     const bodyContent = (
-        <div className="flex flex-col gap-4"></div>
+        <div className="flex flex-col gap-4">
+            <Heading 
+                title="Welcome to Airbnb"
+                subtitle="Create an account to get started"
+            />
+
+            <Input />
+        </div>
     )
 
 
@@ -55,6 +64,7 @@ const RegisterModal = () => {
             actionLabel='Register'
             onClose={registerModal.onClose}
             onSubmit={handleSubmit(onSubmit)}
+            body={bodyContent}
         />
     );
 }
